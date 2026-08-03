@@ -94,7 +94,7 @@ header{
 .hero{
    width: 100%;
    height: 900px;
-   background-image: url(/어프어프/image/hero_banner.png);
+   background-image: url(../image/hero_banner.png);
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
@@ -596,7 +596,7 @@ header{
 .collabo_banner .l_banner{
    width: 100%;
    flex: 1.2;
-   background-image: url(/어프어프/image/unchild_banner.png);
+   background-image: url(../image/unchild_banner.png);
 }
 .collabo_banner .r_banner{
    height: 100%;
@@ -610,10 +610,10 @@ header{
    height: calc((100% - 20px) / 2);
 }
 .collabo_banner .r_banner_top{
-   background-image: url(/어프어프/image/knee_banner.png);
+   background-image: url(../image/knee_banner.png);
 }
 .collabo_banner .r_banner_bottom{
-   background-image: url(/어프어프/image/seventeen_banner.png);
+   background-image: url(../image/seventeen_banner.png);
 }
 .collabo .collabo_i .banner_text{
    position: absolute;
@@ -680,10 +680,10 @@ header{
    background-size: cover;
 }
 .collection .collection_b .l_collection{
-   background-image: url(/어프어프/image/character_banner.png);
+   background-image: url(../image/character_banner.png);
 }
 .collection .collection_b .r_collection{
-   background-image: url(/어프어프/image/collection_banner.png);
+   background-image: url(../image/collection_banner.png);
 }
 .collection .collection_b .shopnow_btn{
    position: absolute;
@@ -729,7 +729,7 @@ header{
    background-position: center;
    background-size: cover;
 
-   background-image: url(/어프어프/image/brand_story.png);
+   background-image: url(../image/brand_story.png);
 }
 .brand_story .brand_story_i .brand_img .plus_btn{
    position: absolute;

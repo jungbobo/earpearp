@@ -1,0 +1,71 @@
+@font-face {
+	font-family: "Pretendard _bl";
+	src: url(./woff2/Pretendard-Black.woff2);
+}
+
+@font-face {
+	font-family: "Pretendard_eb";
+	src: url(./woff2/Pretendard-ExtraBold.woff2);
+}
+
+@font-face {
+	font-family: "Pretendard_b";
+	src: url(./woff2/Pretendard-Bold.woff2);
+}
+
+@font-face {
+	font-family: "Pretendard_sb";
+	src: url(./woff2/Pretendard-SemiBold.woff2);
+}
+
+@font-face {
+	font-family: "Pretendard_m";
+	src:  url(./woff2/Pretendard-Medium.woff2);
+}
+
+@font-face {
+	font-family: "Pretendard_r";
+	src: url(./woff2/Pretendard-Regular.woff2);
+}
+
+@font-face {
+	font-family: "Pretendard_l";
+	src: url(./woff2/Pretendard-Light.woff2);
+}
+
+@font-face {
+	font-family: "Pretendard_el";
+	src: url(./woff2/Pretendard-ExtraLight.woff2);
+}
+
+@font-face {
+	font-family: "Pretendard_t";
+	src: url(./woff2/Pretendard-Thin.woff2);
+}
+
+*{
+    font-family: "pretandard_m";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+header{
+    position: fixed;
+    z-index: 50;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}

@@ -69,7 +69,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;z-index: 50;
+  padding: 0 40px;
 }
 .header_i{
    display: flex;
@@ -796,6 +796,7 @@ footer .footer_i .text_box dd{
 }
 footer .footer_i .text_box dd{
    margin-bottom: 20px;
+   font-family: "pretendard_r";
 }
 footer .footer_i .text_box .first{
    margin-bottom: 15px;

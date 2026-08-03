@@ -69,3 +69,14 @@ header{
     justify-content: space-between;
     padding: 0 40px;
 }
+header .header_i{
+	display: flex;
+	align-items: center;
+}
+header .header_i .gnb ul{
+	display: flex;
+	gap: 100px;
+}
+header .header_i .gnb a{
+	font-size: 15px;
+}

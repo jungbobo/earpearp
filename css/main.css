@@ -1,46 +1,46 @@
 @font-face {
 	font-family: "Pretendard _bl";
-	src: url(./woff2/Pretendard-Black.woff2);
+	src: url(../font/Pretendard-Black.woff2);
 }
 
 @font-face {
 	font-family: "Pretendard_eb";
-	src: url(./woff2/Pretendard-ExtraBold.woff2);
+	src: url(../font/Pretendard-ExtraBold.woff2);
 }
 
 @font-face {
 	font-family: "Pretendard_b";
-	src: url(./woff2/Pretendard-Bold.woff2);
+	src: url(../font/Pretendard-Bold.woff2);
 }
 
 @font-face {
 	font-family: "Pretendard_sb";
-	src: url(./woff2/Pretendard-SemiBold.woff2);
+	src: url(../font/Pretendard-SemiBold.woff2);
 }
 
 @font-face {
 	font-family: "Pretendard_m";
-	src:  url(./woff2/Pretendard-Medium.woff2);
+	src:  url(../font/Pretendard-Medium.woff2);
 }
 
 @font-face {
 	font-family: "Pretendard_r";
-	src: url(./woff2/Pretendard-Regular.woff2);
+	src: url(../font/Pretendard-Regular.woff2);
 }
 
 @font-face {
 	font-family: "Pretendard_l";
-	src: url(./woff2/Pretendard-Light.woff2);
+	src: url(../font/Pretendard-Light.woff2);
 }
 
 @font-face {
 	font-family: "Pretendard_el";
-	src: url(./woff2/Pretendard-ExtraLight.woff2);
+	src: url(../font/Pretendard-ExtraLight.woff2);
 }
 
 @font-face {
 	font-family: "Pretendard_t";
-	src: url(./woff2/Pretendard-Thin.woff2);
+	src: url(../font/Pretendard-Thin.woff2);
 }
 
 *{
@@ -628,7 +628,7 @@ header{
 }
 .l_banner .banner_text p{
    font-size: 27px;
-   font-family: "pretendard_sb";
+   font-family: "pretendard_r";
 }
 .r_banner .banner_text h3{
    margin-bottom: 8px;
@@ -638,7 +638,7 @@ header{
 }
 .r_banner .banner_text p{
    font-size: 23px;
-   font-family: "pretendard_sb";
+   font-family: "pretendard_r";
 }
 .collection{
    width: 1680px;
@@ -746,58 +746,84 @@ header{
    font-size: 17px;
    gap: 10px;
 }
-footer{
-   width: 100%;
-   min-height: 400px;
-   background-color: #0040c1;
+footer {
+  width: 100%;
+  background-color: #0042da;
+  color: #ffffff;
+  padding: 80px 0 100px;
+  font-family: "pretendard_r";
 }
-footer .footer_i{
-   display: flex;
-   align-items: flex-start;
-   justify-content: space-between;
-   gap: 50px;
-   width: 1680px;
-   margin: 0 auto;
-   padding-top: 100px;
-} 
-footer .footer_i .f_logo{
-   flex-shrink: 0;
+
+.footer_i {
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
 }
-footer .footer_i .f_logo img{
-   display: block;
+
+.footer_i .f_logo {
+  flex-shrink: 0;
+  margin-right: 20px;
 }
-footer .footer_i .text_box{
-   min-width: 0;
-   color: #fff;
+
+.footer_i .f_logo img {
+  height: 26px;
+  display: block;
 }
-footer .footer_i .text_box h3{
-   margin: 0 0 32px;
-   font-size: 16px;
-   font-family: "pretendard_b";
-   line-height: 100%;
+
+.footer_i .text_box {
+  flex: 1;
 }
-footer .footer_i .text_box dl{
-   margin: 0;
-   padding: 0;
+
+.footer_i .text_box h3 {
+  font-family: "pretendard_b";
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  color: #ffffff;
 }
-footer .footer_i .info_item{
-   margin-bottom: 20px;
+
+.footer_i .text_box ul li {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #bcbcbc;
+  margin-bottom: 16px;
 }
-.footer .footer_i .info_item:last-child{
-   margin-bottom: 0;
+
+.footer_i .text_box .company_name,
+.footer_i .text_box .tel_num {
+  font-family: "pretendard_sb";
+  font-size: 13px;
+  color: #bcbcbc;
+  margin-bottom: 20px;
 }
-footer .footer_i .text_box dt,
-footer .footer_i .text_box dd{
-   margin: 0;
-   padding: 0;
-   font-size: 14px;
-   font-family: "pretendard_m";
-   line-height: 140%;
+
+.footer_i .text_box .label {
+  display: block;
+  font-family: "pretendard_sb";
+  font-size: 11px;
+  color: #bcbcbc;
+  letter-spacing: 0.3px;
+  margin-bottom: 2px;
 }
-footer .footer_i .text_box dd{
-   margin-bottom: 20px;
-   font-family: "pretendard_r";
+
+.footer_i .text_box .value {
+  display: block;
+  font-family: "pretendard_r";
+  font-size: 12px;
+  color: #bcbcbc;
 }
-footer .footer_i .text_box .first{
-   margin-bottom: 15px;
+
+.footer_i .address_info li {
+  line-height: 1.6;
+}
+
+.footer_i .contact_info .copyright {
+  margin-top: 28px;
+  font-family: "pretendard_r";
+  font-size: 11px;
+  color: #bcbcbcbc;
 }

@@ -1,12 +1,424 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shop</title>
+    <!-- css 및 favicon 연결 -->
     <link rel="stylesheet" href="/어프어프/css/shop.css">
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
+
+    <!-- js 및 라이브러리 연결(폰트어썸) -->
+    <script src="https://kit.fontawesome.com/a01f79776e.js" crossorigin="anonymous"></script>
+    <script src="../script/shop.js"></script>
 </head>
+
 <body>
-    
+
+    <!-- header -->
+    <header>
+        <div class="header_i">
+            <h1 class="logo">
+                <a href="../index.html">
+                    <img src="../image/logo.png" alt="logo">
+                </a>
+            </h1>
+        </div>
+
+        <nav class="gnb">
+            <ul>
+                <li><a href="./shop.html">SHOP</a></li>
+                <li><a href="#">COLLECTION</a></li>
+                <li><a href="#">EVENT</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="#">COMMUNITY</a></li>
+            </ul>
+        </nav>
+
+        <div class="header_icon">
+            <div class="h_icon">
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <main class="shop_main">
+
+        <!-- top promo banner -->
+        <div class="promo_banner">
+            <div class="promo_i">
+                <span class="badge">HOT</span>
+                <p>7월 한정 <strong>여름 파우치 컬렉션</strong> 최대 38% 할인</p>
+                <button type="button" class="close_btn" aria-label="닫기">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="shop_container">
+
+            <!-- breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="#">SHOP</a> &gt; <span>Phone case</span>
+            </nav>
+
+            <!-- category list -->
+            <ul class="category_list">
+                <li><a href="#">NEW</a></li>
+                <li><a href="#">BEST</a></li>
+                <li class="active"><a href="#">Phone case</a></li>
+                <li><a href="#">Airpods case</a></li>
+                <li><a href="#">Smart tok</a></li>
+                <li><a href="#">Tablet & Laptop</a></li>
+                <li><a href="#">Bag & Pouch</a></li>
+                <li><a href="#">Digital</a></li>
+                <li><a href="#">Stationery</a></li>
+                <li><a href="#">Living</a></li>
+                <li><a href="#">Keyring</a></li>
+            </ul>
+
+            <!-- shop title & sort -->
+            <div class="shop_header">
+                <div class="title_area">
+                    <h2>Phone case</h2>
+                    <span class="count">전체 330개</span>
+                </div>
+
+                <ul class="sort_list">
+                    <li class="active"><button type="button">최신순</button></li>
+                    <li><button type="button">인기순</button></li>
+                    <li><button type="button">낮은 가격순</button></li>
+                    <li><button type="button">높은 가격순</button></li>
+                </ul>
+            </div>
+
+            <!-- product grid -->
+            <div class="product_grid">
+
+                <!-- item 1 -->
+                <div class="product_card">
+                    <a href="#" class="product_img">
+                        <img src="../image/vintage_dot.png" alt="빈티지 도트 에폭시 범퍼 케이스">
+                    </a>
+                    <div class="product_info">
+                        <div class="product_name_row">
+                            <a href="#" class="product_name">빈티지 도트 에폭시 범퍼 케이스</a>
+                            <div class="product_icons">
+                                <button type="button" class="wish_btn"><i class="fa-regular fa-heart"></i></button>
+                                <button type="button" class="cart_btn"><i class="fa-solid fa-bag-shopping"></i></button>
+                            </div>
+                        </div>
+                        <p class="product_price">14,900원</p>
+                    </div>
+                </div>
+
+                <!-- item 2 -->
+                <div class="product_card">
+                    <a href="#" class="product_img">
+                        <img src="../image/Aurora_Case.png" alt="[갤럭시 S25 추가] ONLY 오로라">
+                    </a>
+                    <div class="product_info">
+                        <div class="product_name_row">
+                            <a href="#" class="product_name">[갤럭시 S25 추가] ONLY 오로라</a>
+                            <div class="product_icons">
+                                <button type="button" class="wish_btn"><i class="fa-regular fa-heart"></i></button>
+                                <button type="button" class="cart_btn"><i class="fa-solid fa-bag-shopping"></i></button>
+                            </div>
+                        </div>
+                        <p class="product_price">14,900원</p>
+                    </div>
+                </div>
+
+                <!-- item 3 -->
+                <div class="product_card">
+                    <a href="#" class="product_img">
+                        <img src="../image/Silver_case.jpg" alt="라이트 그레이 - SILVER(에폭시)">
+                    </a>
+                    <div class="product_info">
+                        <div class="product_name_row">
+                            <a href="#" class="product_name">라이트 그레이 - SILVER(에폭시)</a>
+                            <div class="product_icons">
+                                <button type="button" class="wish_btn"><i class="fa-regular fa-heart"></i></button>
+                                <button type="button" class="cart_btn"><i class="fa-solid fa-bag-shopping"></i></button>
+                            </div>
+                        </div>
+                        <p class="product_price">14,900원</p>
+                    </div>
+                </div>
+
+                <!-- item 4 -->
+                <div class="product_card">
+                    <a href="#" class="product_img">
+                        <img src="../image/MagSafe_Transparent.jpg" alt="맥세이프 호환 투명 카드 포켓 케이스">
+                    </a>
+                    <div class="product_info">
+                        <div class="product_name_row">
+                            <a href="#" class="product_name">맥세이프 호환 투명 카드 포켓 케이스</a>
+                            <div class="product_icons">
+                                <button type="button" class="wish_btn"><i class="fa-regular fa-heart"></i></button>
+                                <button type="button" class="cart_btn"><i class="fa-solid fa-bag-shopping"></i></button>
+                            </div>
+                        </div>
+                        <p class="product_price">11,900원</p>
+                    </div>
+                </div>
+
+                <!-- item 5 -->
+                <div class="product_card">
+                    <a href="#" class="product_img">
+                        <img src="../image/dot_pop_bule.jpg" alt="[SET]도트 팝 블루 선풍기+에폭시 케이스">
+                    </a>
+                    <div class="product_info">
+                        <div class="product_name_row">
+                            <a href="#" class="product_name">[SET]도트 팝 블루 선풍기+에폭시 케이스</a>
+                            <div class="product_icons">
+                                <button type="button" class="wish_btn"><i class="fa-regular fa-heart"></i></button>
+                                <button type="button" class="cart_btn"><i class="fa-solid fa-bag-shopping"></i></button>
+                            </div>
+                        </div>
+                        <p class="product_price">48,800원</p>
+                    </div>
+                </div>
+
+                <!-- item 6 -->
+                <div class="product_card">
+                    <a href="#" class="product_img">
+                        <img src="../image/dot_pop_red.jpg" alt="[SET]도트 팝 레드 선풍기+에폭시 케이스">
+                    </a>
+                    <div class="product_info">
+                        <div class="product_name_row">
+                            <a href="#" class="product_name">[SET]도트 팝 레드 선풍기+에폭시 케이스</a>
+                            <div class="product_icons">
+                                <button type="button" class="wish_btn"><i class="fa-regular fa-heart"></i></button>
+                                <button type="button" class="cart_btn"><i class="fa-solid fa-bag-shopping"></i></button>
+                            </div>
+                        </div>
+                        <p class="product_price">48,800원</p>
+                    </div>
+                </div>
+
+                <!-- item 7 -->
+                <div class="product_card">
+                    <a href="#" class="product_img">
+                        <img src="../image/dot_pop_black.jpg" alt="[SET]도트 팝 블랙 선풍기+에폭시 케이스">
+                    </a>
+                    <div class="product_info">
+                        <div class="product_name_row">
+                            <a href="#" class="product_name">[SET]도트 팝 블랙 선풍기+에폭시 케이스</a>
+                            <div class="product_icons">
+                                <button type="button" class="wish_btn"><i class="fa-regular fa-heart"></i></button>
+                                <button type="button" class="cart_btn"><i class="fa-solid fa-bag-shopping"></i></button>
+                            </div>
+                        </div>
+                        <p class="product_price">48,800원</p>
+                    </div>
+                </div>
+
+                <!-- item 8 -->
+                <div class="product_card">
+                    <a href="#" class="product_img">
+                        <img src="../image/tomato_set.jpg" alt="토마토 SET(반투명 케이스 + 우산)">
+                    </a>
+                    <div class="product_info">
+                        <div class="product_name_row">
+                            <a href="#" class="product_name">토마토 SET(반투명 케이스 + 우산)</a>
+                            <div class="product_icons">
+                                <button type="button" class="wish_btn"><i class="fa-regular fa-heart"></i></button>
+                                <button type="button" class="cart_btn"><i class="fa-solid fa-bag-shopping"></i></button>
+                            </div>
+                        </div>
+                        <p class="product_price">39,800원</p>
+                    </div>
+                </div>
+
+                <!-- item 9 -->
+                <div class="product_card">
+                    <a href="#" class="product_img">
+                        <img src="../image/Midnight_Dot.jpg" alt="미드나잇 도트 (에폭시)">
+                    </a>
+                    <div class="product_info">
+                        <div class="product_name_row">
+                            <a href="#" class="product_name">미드나잇 도트 (에폭시)</a>
+                            <div class="product_icons">
+                                <button type="button" class="wish_btn"><i class="fa-regular fa-heart"></i></button>
+                                <button type="button" class="cart_btn"><i class="fa-solid fa-bag-shopping"></i></button>
+                            </div>
+                        </div>
+                        <p class="product_price">14,900원</p>
+                    </div>
+                </div>
+
+                <!-- item 10 -->
+                <div class="product_card">
+                    <a href="#" class="product_img">
+                        <img src="../image/tomato_dot_case.jpg" alt="토마토 도트 - SILVER(에폭시)">
+                    </a>
+                    <div class="product_info">
+                        <div class="product_name_row">
+                            <a href="#" class="product_name">토마토 도트 - SILVER(에폭시)</a>
+                            <div class="product_icons">
+                                <button type="button" class="wish_btn"><i class="fa-regular fa-heart"></i></button>
+                                <button type="button" class="cart_btn"><i class="fa-solid fa-bag-shopping"></i></button>
+                            </div>
+                        </div>
+                        <p class="product_price">14,900원</p>
+                    </div>
+                </div>
+
+                <!-- item 11 -->
+                <div class="product_card">
+                    <a href="#" class="product_img">
+                        <img src="../image/tomato_sprinkles.jpg" alt="토마토 스프링클 - SILVER(에폭시)">
+                    </a>
+                    <div class="product_info">
+                        <div class="product_name_row">
+                            <a href="#" class="product_name">토마토 스프링클 - SILVER(에폭시)</a>
+                            <div class="product_icons">
+                                <button type="button" class="wish_btn"><i class="fa-regular fa-heart"></i></button>
+                                <button type="button" class="cart_btn"><i class="fa-solid fa-bag-shopping"></i></button>
+                            </div>
+                        </div>
+                        <p class="product_price">14,900원</p>
+                    </div>
+                </div>
+
+                <!-- item 12 -->
+                <div class="product_card">
+                    <a href="#" class="product_img">
+                        <img src="../image/tomato_Stripe.jpg" alt="토마토 스트라이프 - SILVER(에폭시)">
+                    </a>
+                    <div class="product_info">
+                        <div class="product_name_row">
+                            <a href="#" class="product_name">토마토 스트라이프 - SILVER(에폭시)</a>
+                            <div class="product_icons">
+                                <button type="button" class="wish_btn"><i class="fa-regular fa-heart"></i></button>
+                                <button type="button" class="cart_btn"><i class="fa-solid fa-bag-shopping"></i></button>
+                            </div>
+                        </div>
+                        <p class="product_price">14,900원</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- more button -->
+            <div class="more_btn_area">
+                <button type="button" class="more_btn">
+                    더보기 <i class="fa-solid fa-angle-down"></i>
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+    <!-- //main -->
+
+    <!-- footer -->
+    <footer>
+        <div class="footer_i">
+            <div class="f_logo">
+                <img src="../image/f_logo.png" alt="f_logo">
+            </div>
+
+            <!-- COMPANY -->
+            <div class="text_box">
+                <h3>COMPANY</h3>
+                <ul class="company_info">
+                    <li class="company_name">바이인터내셔널주식회사</li>
+                    <li>
+                        <span class="label">OWNER</span>
+                        <span class="value">임성도</span>
+                    </li>
+                    <li>
+                        <span class="label">CORPORATE REGISTRATION NUMBER</span>
+                        <span class="value">393-86-00930</span>
+                    </li>
+                    <li>
+                        <span class="label">MALL ORDER LICENSE</span>
+                        <span class="value">제 2018-경기부천-1349호</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CUSTOMER CENTER -->
+            <div class="text_box">
+                <h3>CUSTOMER CENTER</h3>
+                <ul class="customer_info">
+                    <li class="tel_num">1533-1321</li>
+                    <li>
+                        <span class="label">MONDAY - FRIDAY</span>
+                        <span class="value">11:00 - 18:00</span>
+                    </li>
+                    <li>
+                        <span class="label">BREAK TIME</span>
+                        <span class="value">13:00 - 14:00</span>
+                    </li>
+                    <li>
+                        <span class="label">SAT / SUNDAY / HOLIDAY</span>
+                        <span class="value">OFF</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- ADDRESS -->
+            <div class="text_box">
+                <h3>ADDRESS</h3>
+                <ul class="address_info">
+                    <li>
+                        (14548) <br>
+                        경기도 부천시 원미구 신흥로 167 <br>
+                        803호, 804호(중동,신영빌딩)
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="text_box">
+                <h3>CONTACT</h3>
+                <ul class="contact_info">
+                    <li>
+                        <span class="label">CS 문의</span>
+                        <span class="value">buy_cs@buyinternational.co.kr</span>
+                    </li>
+                    <li>
+                        <span class="label">온라인 제휴 / 제안</span>
+                        <span class="value">earpearp_online@buyinternational.co.kr</span>
+                    </li>
+                    <li>
+                        <span class="label">오프라인 제휴 / 제안</span>
+                        <span class="value">earpearp_offline@buyinternational.co.kr</span>
+                    </li>
+                    <li class="copyright">© 2017 EARPEARP</li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    <!-- //footer -->
+
 </body>
+
+</html>
+
+
+
+</body>
+
 </html>

@@ -71,29 +71,39 @@ header{
   justify-content: space-between;
   padding: 0 40px;
 }
+.header_i , .logo > *:first-child{
+   flex-shrink: 0;
+}
 .header_i{
    display: flex;
    align-items: center;
 }
 .gnb ul{
    display: flex;
-   gap: 100px;
+   gap: clamp(20px, 4vw, 80px);
 }
 .gnb a{
    font-size: 15px;
+   white-space: nowrap;
 }
 .header_icon .h_icon{
   display: flex;
   align-items: center;
   gap: 25px;
+  flex-shrink: 0;
 }
 .header_icon .h_icon a{
    font-size: 20px;
    font-weight: 600;
 }
+
+.header_icon .h_icon a:last-child {
+   display: none;
+}
+
 .hero{
    width: 100%;
-   height: 900px;
+   height: auto;
    background-image: url(../image/hero_banner.png);
    background-repeat: no-repeat;
    background-position: center;
@@ -112,7 +122,7 @@ header{
 .hero .hero_i{
    display: flex;
    align-items: center;
-   width: calc(100% - 240px);
+   width: 100%
    max-width: 1680px;
    height: 100%;
    margin: 0 auto;
@@ -534,7 +544,8 @@ header{
   color: #0040c1;
 }
 .collabo{
-   width: 1680px;
+   width: 100%;
+   max-width: 1680px;
    margin: 0 auto;
    padding-bottom: 190px; 
    overflow: hidden;
@@ -595,6 +606,7 @@ header{
 }
 .collabo_banner .l_banner{
    width: 100%;
+   height: 100%;
    flex: 1.2;
    background-image: url(../image/unchild_banner.png);
 }
@@ -625,23 +637,28 @@ header{
    font-family: "pretendard_b";
    font-size: 30px;
    line-height: 150%;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .l_banner .banner_text p{
    font-size: 27px;
    font-family: "pretendard_r";
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.514);
 }
 .r_banner .banner_text h3{
    margin-bottom: 8px;
    font-family: "pretendard_b";
    font-size: 25px;
    line-height: 140%;
+   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 .r_banner .banner_text p{
    font-size: 23px;
    font-family: "pretendard_r";
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.514);
 }
 .collection{
-   width: 1680px;
+   width: 100%;
+   max-width: 1680px;
    margin: 0 auto;
    padding-bottom: 190px; 
 }
@@ -704,9 +721,10 @@ header{
    font-weight: 400;
 }
 .brand_story{
-   width: 1680px;
+   width: 100%;
+   max-width: 1680px;
    margin: 0 auto;
-   padding-bottom: 190px;
+   padding: 0 40px 190px;
 }
 .brand_story .brand_story_i{
    width: 100%;
@@ -723,12 +741,12 @@ header{
 .brand_story .brand_story_i .brand_img{
    position: relative;
    width: 100%;
-   height: 700px;
+   height: auto;
+   aspect-ratio: 16 / 6.6;
    display: block;
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
-
    background-image: url(../image/brand_story.png);
 }
 .brand_story .brand_story_i .brand_img .plus_btn{
@@ -826,4 +844,435 @@ footer {
   font-family: "pretendard_r";
   font-size: 11px;
   color: #bcbcbcbc;
+}
+
+@media screen and (max-width: 1024px) {
+      .hero {
+      height: auto;
+      aspect-ratio: 16 / 9;
+      }
+
+      .hero .hero_i {
+         padding: 0 20px;
+      }
+
+      .hero_text h2 {
+         font-size: clamp(36px, 5vw, 54px);
+         margin-bottom: 20px;
+      }
+
+      .hero_text p {
+         font-size: clamp(15px, 2vw, 18px);
+         margin-bottom: 40px;
+      }
+
+      .shop_btn {
+         font-size: 18px;
+         padding: 8px 20px;
+      }
+
+      .new, .best {
+         width: 100%; 
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+
+      .new {
+         padding-top: 100px;
+         padding-bottom: 100px;
+      }
+
+      .best {
+         padding-bottom: 100px;
+      }
+
+      .new .new_i,
+      .best .best_i {
+         gap: 40px;
+      }
+
+      .new .new_i .new_left,
+      .best .best_i .best_left {
+         width: 180px;
+      }
+
+      .new .new_i .new_left h2,
+      .best .best_i .best_left h2 {
+         font-size: 24px;
+      }
+   
+      .collabo{
+         padding: 0 20px 80px;
+      }
+
+      .collabo .collabo_i .collabo_banner{
+         flex-direction: column;
+         height: auto;
+         gap: 20px;
+      }
+
+      .collabo .collabo_banner .l_banner{
+         flex: none;
+         width: 100%;
+         height: auto;
+         aspect-ratio: 16 / 7.5;
+         background-size: cover;
+      }
+
+      .collabo .collabo_banner .r_banner{
+         flex: none;
+         height: auto;
+         gap: 20px;
+      }
+
+      .collabo .collabo_banner .r_banner_top,
+      .collabo .collabo_banner .r_banner_bottom{
+         width: 100%;
+         height: auto;
+         aspect-ratio: 16 / 5;
+         background-size: cover;
+      }
+
+      .collabo .collabo_i .banner_text{
+         left: 25px;
+         bottom: 25px;
+      }
+
+      .collabo .l_banner .collabo_i .banner_text h3,
+      .collabo .r_banner .collabo_i .banner_text h3{
+         font-size: 26px;
+         margin-bottom: 6px;
+         line-height: 1.4;
+      }
+
+      .collabo .l_banner .collabo_i .banner_text p,
+      .collabo .r_banner .collabo_i .banner_text p{
+         font-size: 20px;
+         line-height: 1.4;
+      }
+
+      .collection {
+         padding: 0 20px;
+         padding-bottom: 100px;
+      }
+
+      .collection .collection_b {
+         flex-direction: column;
+         height: auto;
+         gap: 20px;
+      }
+
+      .collection .l_collection,
+      .collection .r_collection {
+         flex: none;
+         width: 100%;
+         height: auto;
+         aspect-ratio: 16 / 7.5;
+         background-size: cover;
+      }
+
+      .collection .collection_b .shopnow_btn {
+         left: 30px;
+         bottom: 30px;
+         padding: 15px 22px;
+         font-size: 17px;
+         gap: 8px;
+      }
+
+      .collection .collection_b .shopnow_btn span {
+         font-size: 20px;
+      }
+
+      .brand_story {
+         padding: 0 20px 100px;
+      }
+
+      .brand_story .brand_story_i .brand_img {
+         aspect-ratio: 16 / 7;
+      }
+
+      .brand_story .brand_story_i .brand_img .plus_btn {
+         right: 12%;
+         bottom: 15%;
+         padding: 10px 20px;
+         font-size: 14px;
+      }
+
+      .footer_i {
+        flex-wrap: wrap;
+        gap: 40px 60px;
+    }
+      
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .gnb {
+        display: none;
+    }
+
+    .header_icon .h_icon a:last-child {
+        display: inline-block;
+    }
+
+    footer {
+        padding: 60px 0;
+    }
+
+    .footer_i {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 20px;
+    }
+}
+
+
+  @media screen and (max-width: 500px) {
+
+  header {
+    padding: 0 16px;
+    height: 60px;
+  }
+
+  .gnb {
+    display: none;
+  }
+
+  .header_icon .h_icon {
+    gap: 16px;
+  }
+
+  .header_icon .h_icon a {
+    font-size: 18px;
+  }
+
+  .header_icon .h_icon a:last-child {
+    display: inline-block;
+  }
+
+  .hero {
+    height: auto;
+    background-image: url(../image/mo_hero_banner.png);
+    aspect-ratio: 1 / 1.35;
+    padding-top: 60px;
+  }
+
+  .hero .hero_i {
+    padding: 0 20px;
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 90px;
+  }
+
+  .hero_text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .hero_text h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .hero_text p {
+    font-size: 14px;
+    margin-bottom: 0;
+    line-height: 1.4;
+  }
+
+  .shop_btn {
+    font-size: 15px;
+    padding: 8px 18px;
+    margin-top: auto;
+    align-self: flex-start;
+    width: fit-content;
+  }
+
+  .new, .best {
+    padding: 50px 16px;
+  }
+
+  .new .new_i, .best .best_i {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+  }
+
+  .new .new_i .new_left, .best .best_i .best_left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .new .new_i .new_left h2, .best .best_i .best_left h2 {
+    font-size: 24px;
+  }
+
+  .new .new_i .view_all, .best .best_i .view_all {
+    position: static;
+    margin-top: 0;
+    font-size: 13px;
+  }
+
+  .new .new_i .slide_btn, .best .best_i .slide_btn {
+    display: none; 
+  }
+
+  .new .new_i .product_slider, .best .best_i .product_slider {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 15px;
+  }
+
+  .new .new_i .product_list, .best .best_i .product_list {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: max-content;
+    transform: none !important;
+  }
+
+  .new .new_i .product_card, .best .best_i .product_card {
+    width: calc(100vw - 32px) !important;
+    flex-shrink: 0;
+    height: auto !important;
+    scroll-snap-align: start;
+  }
+
+  .new .new_i .product_img, .best .best_i .product_img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1;
+  }
+
+  .new .new_i .product_slider::-webkit-scrollbar,
+  .best .best_i .product_slider::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .new .new_i .product_slider::-webkit-scrollbar-track,
+  .best .best_i .product_slider::-webkit-scrollbar-track {
+    background: #e9e9e9;
+    border-radius: 4px;
+  }
+
+  .new .new_i .product_slider::-webkit-scrollbar-thumb,
+  .best .best_i .product_slider::-webkit-scrollbar-thumb {
+    background: #0040c1;
+    border-radius: 4px;
+  }
+
+  .collabo {
+    padding: 0 16px 80px;
+  }
+
+  .collabo .collabo_i .text_i .text_l h2 {
+    font-size: 24px;
+  }
+
+  .collabo .collabo_i .collabo_banner {
+    gap: 16px;
+  }
+
+  .collabo_banner .l_banner {
+    aspect-ratio: 16 / 9;
+  }
+
+  .collabo_banner .r_banner {
+    gap: 16px;
+  }
+
+  .collabo_banner .r_banner_top,
+  .collabo_banner .r_banner_bottom {
+    aspect-ratio: 16 / 6;
+  }
+
+  .collabo .collabo_i .banner_text {
+    left: 16px;
+    bottom: 16px;
+  }
+
+  .collabo_banner .banner_text h3 {
+    font-size: 18px !important;
+    margin-bottom: 4px;
+  }
+
+  .collabo_banner .banner_text p {
+    font-size: 13px !important;
+  }
+
+  .collection {
+    padding: 0 16px 80px;
+  }
+
+  .collection .collection_i h2 {
+    font-size: 24px;
+  }
+
+  .collection .collection_b {
+    gap: 16px;
+  }
+
+  .collection .l_collection,
+  .collection .r_collection {
+    aspect-ratio: 16 / 9;
+  }
+
+  .collection .collection_b .shopnow_btn {
+    left: 16px;
+    bottom: 16px;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .brand_story {
+    padding: 0 16px 90px;
+  }
+
+  .brand_story .brand_story_i .text_i h2 {
+    font-size: 24px;
+  }
+
+  .brand_story .brand_story_i .brand_img {
+    aspect-ratio: 1 / 1;
+    background-image: url(../image/mo_brand_story.png);
+  }
+
+  .brand_story .brand_story_i .brand_img .plus_btn {
+    right: 27px;
+    bottom: 135px;
+    padding: 8px 16px;
+    font-size: 9px;
+  }
+
+  footer {
+    padding: 50px 0 70px;
+  }
+
+  .footer_i {
+    padding: 0 16px;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer_i .text_box h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .footer_i .text_box ul li {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
 }

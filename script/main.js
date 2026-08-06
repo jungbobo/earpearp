@@ -1,4 +1,14 @@
 $(function () {
+
+  $(".menu > li").on({
+    mouseenter: function () {
+      $(this).find(".submenu").stop().fadeIn();
+    },
+    mouseleave: function () {
+      $(this).find(".submenu").stop().fadeOut();
+    }
+  });
+  
     const $newList = $('.new .product_list');
     const $newCards = $('.new .product_card');
     const $prevBtn = $('.new .prev_btn');
@@ -13,86 +23,86 @@ $(function () {
     const maxIndex = $newCards.length - visibleCards;
 
     function updateButtons() {
-        if (currentIndex <= 0) {
-            $prevBtn.prop('disabled', true);
-        } else {
-            $prevBtn.prop('disabled', false);
-        }
+      if(currentIndex <= 0) {
+    $prevBtn.prop('disabled', true);
+  } else {
+    $prevBtn.prop('disabled', false);
+  }
 
-        if (currentIndex >= maxIndex) {
-            $nextBtn.prop('disabled', true);
-        } else {
-            $nextBtn.prop('disabled', false);
-        }
-    }
+  if (currentIndex >= maxIndex) {
+    $nextBtn.prop('disabled', true);
+  } else {
+    $nextBtn.prop('disabled', false);
+  }
+}
 
     updateButtons();
 
-    $nextBtn.on('click', function () {
-        if (currentIndex < maxIndex) {
-            currentIndex++;
-            $newList.stop().animate({
-                marginLeft: -moveDistance * currentIndex + 'px'
-            }, 400);
-            updateButtons();
-        }
-    });
+$nextBtn.on('click', function () {
+  if (currentIndex < maxIndex) {
+    currentIndex++;
+    $newList.stop().animate({
+      marginLeft: -moveDistance * currentIndex + 'px'
+    }, 400);
+    updateButtons();
+  }
+});
 
-    $prevBtn.on('click', function () {
-        if (currentIndex > 0) {
-            currentIndex--;
-            $newList.stop().animate({
-                marginLeft: -moveDistance * currentIndex + 'px'
-            }, 400);
-            updateButtons();
-        }
-    });
+$prevBtn.on('click', function () {
+  if (currentIndex > 0) {
+    currentIndex--;
+    $newList.stop().animate({
+      marginLeft: -moveDistance * currentIndex + 'px'
+    }, 400);
+    updateButtons();
+  }
+});
 
 
-    const $bestList = $('.best .product_list');
-  const $bestCards = $('.best .product_card');
-  const $bestPrevBtn = $('.best .prev_btn');
-  const $bestNextBtn = $('.best .next_btn');
+const $bestList = $('.best .product_list');
+const $bestCards = $('.best .product_card');
+const $bestPrevBtn = $('.best .prev_btn');
+const $bestNextBtn = $('.best .next_btn');
 
-  const bestCardWidth = $bestCards.outerWidth();
-  const bestMoveDistance = bestCardWidth + gap;
-  
-  let bestCurrentIndex = 0;
-  const bestMaxIndex = $bestCards.length - visibleCards;
+const bestCardWidth = $bestCards.outerWidth();
+const bestMoveDistance = bestCardWidth + gap;
 
-  function updateBestButtons() {
-    if (bestCurrentIndex <= 0) {
-      $bestPrevBtn.prop('disabled', true);
-    } else {
-      $bestPrevBtn.prop('disabled', false);
-    }
+let bestCurrentIndex = 0;
+const bestMaxIndex = $bestCards.length - visibleCards;
 
-    if (bestCurrentIndex >= bestMaxIndex) {
-      $bestNextBtn.prop('disabled', true);
-    } else {
-      $bestNextBtn.prop('disabled', false);
-    }
+function updateBestButtons() {
+  if (bestCurrentIndex <= 0) {
+    $bestPrevBtn.prop('disabled', true);
+  } else {
+    $bestPrevBtn.prop('disabled', false);
   }
 
-  updateBestButtons();
+  if (bestCurrentIndex >= bestMaxIndex) {
+    $bestNextBtn.prop('disabled', true);
+  } else {
+    $bestNextBtn.prop('disabled', false);
+  }
+}
 
-  $bestNextBtn.on('click', function () {
-    if (bestCurrentIndex < bestMaxIndex) {
-      bestCurrentIndex++;
-      $bestList.stop().animate({
-        marginLeft: -bestMoveDistance * bestCurrentIndex + 'px'
-      }, 400);
-      updateBestButtons();
-    }
-  });
+updateBestButtons();
 
-  $bestPrevBtn.on('click', function () {
-    if (bestCurrentIndex > 0) {
-      bestCurrentIndex--;
-      $bestList.stop().animate({
-        marginLeft: -bestMoveDistance * bestCurrentIndex + 'px'
-      }, 400);
-      updateBestButtons();
-    }
-  });
+$bestNextBtn.on('click', function () {
+  if (bestCurrentIndex < bestMaxIndex) {
+    bestCurrentIndex++;
+    $bestList.stop().animate({
+      marginLeft: -bestMoveDistance * bestCurrentIndex + 'px'
+    }, 400);
+    updateBestButtons();
+  }
+});
+
+$bestPrevBtn.on('click', function () {
+  if (bestCurrentIndex > 0) {
+    bestCurrentIndex--;
+    $bestList.stop().animate({
+      marginLeft: -bestMoveDistance * bestCurrentIndex + 'px'
+    }, 400);
+    updateBestButtons();
+  }
+});
 });

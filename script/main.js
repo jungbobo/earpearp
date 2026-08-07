@@ -2,10 +2,10 @@ $(function () {
 
   $(".menu > li").on({
     mouseenter: function () {
-      $(this).find(".submenu").stop().fadeIn();
+      $(this).find(".submenu").stop().fadeIn(300);
     },
     mouseleave: function () {
-      $(this).find(".submenu").stop().fadeOut();
+      $(this).find(".submenu").stop().fadeOut(300);
     }
   });
   

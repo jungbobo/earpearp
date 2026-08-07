@@ -1,108 +1,87 @@
 $(function () {
 
-  $(".menu > li").on({
-    mouseenter: function () {
-      $(this).find(".submenu").stop().fadeIn();
+  $('.menu > li').hover(
+    function () {
+      $(this).find('.submenu').stop().slideDown(200);
     },
-    mouseleave: function () {
-      $(this).find(".submenu").stop().fadeOut();
+    function () {
+      $(this).find('.submenu').stop().slideUp(200);
+    }
+  );
+
+  $('.header_icon .fa-bars').parent('a').on('click', function (e) {
+    e.preventDefault();
+    $('.mobile_menu').fadeIn(200);
+    $('.mobile_menu_wrap').addClass('active');
+    $('body').css('overflow', 'hidden');
+  });
+
+  $('.btn_close, .mobile_menu').on('click', function () {
+    $('.mobile_menu').fadeOut(200);
+    $('.mobile_menu_wrap').removeClass('active');
+    $('body').css('overflow', '');
+  });
+
+  $('.mobile_nav > li > a').on('click', function (e) {
+    var $submenu = $(this).next('.mobile_submenu');
+
+    if ($submenu.length > 0) {
+      e.preventDefault();
+
+      $('.mobile_submenu').not($submenu).slideUp(200);
+      $('.mobile_nav > li > a').not(this).find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+
+      $submenu.slideToggle(200);
+      $(this).find('i').toggleClass('fa-chevron-down fa-chevron-up');
     }
   });
-  
-    const $newList = $('.new .product_list');
-    const $newCards = $('.new .product_card');
-    const $prevBtn = $('.new .prev_btn');
-    const $nextBtn = $('.new .next_btn');
 
-    const cardWidth = $newCards.outerWidth();
+  function initProductSlider(sectionSelector) {
+    const $section = $(sectionSelector);
+    const $list = $section.find('.product_list');
+    const $cards = $section.find('.product_card');
+    const $prevBtn = $section.find('.prev_btn');
+    const $nextBtn = $section.find('.next_btn');
+
+    if (!$cards.length) return;
+
+    const cardWidth = $cards.outerWidth();
     const gap = 40;
     const moveDistance = cardWidth + gap;
 
     let currentIndex = 0;
     const visibleCards = 3;
-    const maxIndex = $newCards.length - visibleCards;
+    const maxIndex = $cards.length - visibleCards;
 
     function updateButtons() {
-      if(currentIndex <= 0) {
-    $prevBtn.prop('disabled', true);
-  } else {
-    $prevBtn.prop('disabled', false);
-  }
+      $prevBtn.prop('disabled', currentIndex <= 0);
+      $nextBtn.prop('disabled', currentIndex >= maxIndex);
+    }
 
-  if (currentIndex >= maxIndex) {
-    $nextBtn.prop('disabled', true);
-  } else {
-    $nextBtn.prop('disabled', false);
-  }
-}
+    $nextBtn.on('click', function () {
+      if (currentIndex < maxIndex) {
+        currentIndex++;
+        $list.stop().animate({
+          marginLeft: -moveDistance * currentIndex + 'px'
+        }, 400);
+        updateButtons();
+      }
+    });
+
+    $prevBtn.on('click', function () {
+      if (currentIndex > 0) {
+        currentIndex--;
+        $list.stop().animate({
+          marginLeft: -moveDistance * currentIndex + 'px'
+        }, 400);
+        updateButtons();
+      }
+    });
 
     updateButtons();
-
-$nextBtn.on('click', function () {
-  if (currentIndex < maxIndex) {
-    currentIndex++;
-    $newList.stop().animate({
-      marginLeft: -moveDistance * currentIndex + 'px'
-    }, 400);
-    updateButtons();
-  }
-});
-
-$prevBtn.on('click', function () {
-  if (currentIndex > 0) {
-    currentIndex--;
-    $newList.stop().animate({
-      marginLeft: -moveDistance * currentIndex + 'px'
-    }, 400);
-    updateButtons();
-  }
-});
-
-
-const $bestList = $('.best .product_list');
-const $bestCards = $('.best .product_card');
-const $bestPrevBtn = $('.best .prev_btn');
-const $bestNextBtn = $('.best .next_btn');
-
-const bestCardWidth = $bestCards.outerWidth();
-const bestMoveDistance = bestCardWidth + gap;
-
-let bestCurrentIndex = 0;
-const bestMaxIndex = $bestCards.length - visibleCards;
-
-function updateBestButtons() {
-  if (bestCurrentIndex <= 0) {
-    $bestPrevBtn.prop('disabled', true);
-  } else {
-    $bestPrevBtn.prop('disabled', false);
   }
 
-  if (bestCurrentIndex >= bestMaxIndex) {
-    $bestNextBtn.prop('disabled', true);
-  } else {
-    $bestNextBtn.prop('disabled', false);
-  }
-}
+  initProductSlider('.new');
+  initProductSlider('.best');
 
-updateBestButtons();
-
-$bestNextBtn.on('click', function () {
-  if (bestCurrentIndex < bestMaxIndex) {
-    bestCurrentIndex++;
-    $bestList.stop().animate({
-      marginLeft: -bestMoveDistance * bestCurrentIndex + 'px'
-    }, 400);
-    updateBestButtons();
-  }
-});
-
-$bestPrevBtn.on('click', function () {
-  if (bestCurrentIndex > 0) {
-    bestCurrentIndex--;
-    $bestList.stop().animate({
-      marginLeft: -bestMoveDistance * bestCurrentIndex + 'px'
-    }, 400);
-    updateBestButtons();
-  }
-});
 });

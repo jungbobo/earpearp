@@ -2428,6 +2428,14 @@ footer {
       width: fit-content;
    }
 
+   .new{
+      margin: 50px 0;
+   }
+
+   .best{
+      margin-bottom: 30px;
+   }
+
    .new,
    .best,
    .collabo,
@@ -2682,7 +2690,19 @@ footer {
       font-size: 14px;
       font-family: "Pretendard_r";
       margin-bottom: 2px;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+   }
+
+   .collabo .collabo_i h2{
+      font-size: 20px;
+   }
+
+   .collection .collection_i h2{
+      font-size: 20px;
+   }
+
+   .collection .collection_i p{
+      font-size: 12px;
    }
 
    .brand_story .brand_story_i .brand_img .plus_btn {

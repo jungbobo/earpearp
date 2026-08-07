@@ -218,7 +218,7 @@ header .header_i nav .menu .submenu li a:hover {
 
 .hero_text p {
    margin: 0 0 90px;
-   font-family: "Pretendard_r";
+   font-family: "Pretendard_m";
    font-size: 20px;
 }
 
@@ -231,7 +231,7 @@ header .header_i nav .menu .submenu li a:hover {
    color: #fff;
    background-color: #0040c1;
    font-family: "Pretendard_b";
-   font-size: 24px;
+   font-size: 20px;
 }
 
 /* 유연한 반응형 섹션 간격 (clamp 적용) */

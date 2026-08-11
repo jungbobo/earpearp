@@ -40,14 +40,6 @@ $(function () {
     }
   });
 
-  $('.wish_btn').on('click', function (e) {
-    e.preventDefault();
-    
-    $(this).toggleClass('active');
-    
-    $(this).find('i').toggleClass('fa-regular fa-solid');
-  });
-
   function initProductSlider(sectionSelector) {
     const $section = $(sectionSelector);
     const $list = $section.find('.product_list');

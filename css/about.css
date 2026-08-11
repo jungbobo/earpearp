@@ -50,6 +50,10 @@
    box-sizing: border-box;
 }
 
+body {
+   overflow-x: hidden;
+}
+
 a {
    text-decoration: none;
    color: inherit;
@@ -81,14 +85,14 @@ header {
 
 header .header_i {
    position: relative;
-   max-width: 100%;
+   width: 100%;
+   max-width: 1680px;
    height: 100%;
    margin: auto;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   width: 100%;
-   gap: 100px;
+   gap: 20px;
 }
 
 header .header_i nav {
@@ -177,16 +181,128 @@ header .header_i nav .menu .submenu li a:hover {
    display: none;
 }
 
+.mobile_menu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   z-index: 998;
+   display: none;
+}
+
+.mobile_menu_wrap {
+   position: fixed;
+   top: 0;
+   right: -100%;
+   width: 85%;
+   max-width: 400px;
+   height: 100%;
+   background-color: #ffffff;
+   z-index: 999;
+   padding: 30px 20px;
+   overflow-y: auto;
+   transition: right 0.3s ease-in-out;
+   display: flex;
+   flex-direction: column;
+}
+
+.mobile_menu_wrap.active {
+   right: 0;
+}
+
+.mobile_menu_top {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 24px;
+}
+
+.mobile_login {
+   font-family: "Pretendard_b";
+   font-size: 16px;
+   color: #111;
+}
+
+.btn_close {
+   background: none;
+   border: none;
+   font-size: 24px;
+   color: #333;
+   cursor: pointer;
+}
+
+.mobile_search {
+   position: relative;
+   display: flex;
+   align-items: center;
+   background-color: #f5f5f5;
+   border-radius: 25px;
+   padding: 10px 16px;
+   margin-bottom: 30px;
+}
+
+.mobile_search i {
+   color: #888;
+   margin-right: 10px;
+   font-size: 14px;
+}
+
+.mobile_search input {
+   border: none;
+   background: transparent;
+   outline: none;
+   width: 100%;
+   font-family: "Pretendard_r";
+   font-size: 14px;
+   padding-left: 10px;
+}
+
+.mobile_nav > li {
+   border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile_nav > li > a {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 16px 0;
+   font-family: "Pretendard_b";
+   font-size: 16px;
+   color: #222;
+}
+
+.mobile_submenu {
+   display: none;
+   background-color: #f9f9f9;
+   border-radius: 8px;
+   padding: 10px 16px;
+   margin-bottom: 12px;
+}
+
+.mobile_submenu li a {
+   display: block;
+   padding: 8px 0;
+   font-family: "Pretendard_r";
+   font-size: 14px;
+   color: #666;
+}
+
+.mobile_submenu li a:hover {
+   color: #0040C1;
+}
+
 main {
    width: 100%;
    padding-top: 80px;
 }
 
 main > h2 {
-   width: 1680px;
+   width: 100%;
+   max-width: 1680px;
    margin: 0 auto;
-   padding: 60px 0 40px;
-   padding-bottom: 15px;
+   padding: 60px 40px 15px;
    font-family: "Pretendard_b";
    font-size: 30px;
    color: #333;
@@ -245,6 +361,7 @@ main > h2 {
    width: 100%;
    max-width: 1680px;
    margin: 0 auto;
+   padding: 0 20px;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -272,15 +389,15 @@ main > h2 {
 }
 
 .philosophy_i .philosophy_texrbox h3 {
-   font-size: 20px;
+   font-size: 26px;
    font-weight: 700;
    color: #0040c1;
    margin-bottom: 20px;
 }
 
 .philosophy_i .philosophy_texrbox h4 {
-   font-size: 28px;
-   font-weight: 700;
+   font-size: 23px;
+   font-weight: 800;
    line-height: 1.35;
    color: #333;
    margin-bottom: 24px;
@@ -304,6 +421,7 @@ main > h2 {
    width: 100%;
    max-width: 1680px;
    margin: 0 auto;
+   padding: 0 20px;
 }
 
 .character .titlebox {
@@ -367,7 +485,7 @@ main > h2 {
 .character_card .c_img img {
    width: auto;         
    height: 90%;        
-   max-width: none;     
+   max-width: 100%;     
    object-fit: contain;
 }
 
@@ -516,9 +634,14 @@ footer {
    color: #bcbcbc;
 }
 
+
 @media (max-width: 1024px) {
    .character_list {
       grid-template-columns: repeat(2, 1fr);
+   }
+   
+   .character_card {
+      gap: 5px;
    }
 
    .philosophy {
@@ -533,6 +656,8 @@ footer {
 
    .philosophy_i .img {
       margin: 0;
+      width: 280px;
+      height: 280px;
    }
 
    .footer_i {
@@ -554,8 +679,9 @@ footer {
       display: inline-block;
    }
 
-   .character_list {
-      grid-template-columns: repeat(2, 1fr);
+   main > h2 {
+      padding: 40px 20px 15px;
+      font-size: 24px;
    }
 
    footer {
@@ -569,7 +695,7 @@ footer {
    }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
    header {
       padding: 0 16px;
       height: 60px;
@@ -585,6 +711,41 @@ footer {
 
    .header_icon .h_icon a:last-child {
       display: inline-block;
+   }
+
+   main .brand_story h3{
+      font-size: 25px;
+   }
+
+   .philosophy .philosophy_texrbox h3{
+      font-size: 25px;
+   }
+
+   .philosophy .philosophy_texrbox h4{
+      font-size: 20px;
+   }
+
+   main > h2 {
+      padding: 30px 16px 15px;
+      font-size: 20px;
+   }
+
+   .character{
+      padding: 95px 0 110px 0;
+   }
+
+   .character .titlebox{
+      margin-bottom: 40px;
+   }
+
+   .character .titlebox h3{
+      font-size: 25px;
+   }
+
+
+   .character_list {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 40px;
    }
 
    footer {

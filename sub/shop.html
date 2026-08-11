@@ -10,53 +10,182 @@
     <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
 
     <!-- js 및 라이브러리 연결(폰트어썸) -->
+     <script src="../jquery-4.0.0.min.js"></script>
+     <script src="../jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/a01f79776e.js" crossorigin="anonymous"></script>
     <script src="../script/shop.js"></script>
 </head>
 
 <body>
 
-    <!-- header -->
-    <header>
-        <div class="header_i">
-            <h1 class="logo">
-                <a href="../index.html">
-                    <img src="../image/logo.png" alt="logo">
-                </a>
-            </h1>
-        </div>
+       <!-- header -->
+   <header>
+      <div class="header_i">
+         <h1 class="logo">
+            <a href="#">
+               <img src="../image/logo.png" alt="logo">
+            </a>
+         </h1>
 
-        <nav class="gnb">
-            <ul>
-                <li><a href="./shop.html">SHOP</a></li>
-                <li><a href="#">COLLECTION</a></li>
-                <li><a href="#">EVENT</a></li>
-                <li><a href="./about.html">ABOUT</a></li>
-                <li><a href="#">COMMUNITY</a></li>
+         <nav>
+            <ul class="menu">
+               <li>
+                  <a href="sub/shop.html">SHOP</a>
+                  <ul class="submenu">
+                     <li><a href="#">NEW</a></li>
+                     <li><a href="#">BEST</a></li>
+                     <li><a href="#">Phone Case</a></li>
+                     <li><a href="#">Earbuds Case</a></li>
+                     <li><a href="#">Smart Tok</a></li>
+                     <li><a href="#">Tablet & Laptop</a></li>
+                     <li><a href="#">Bag & Pouch</a></li>
+                     <li><a href="#">Digital</a></li>
+                     <li><a href="#">Stationery</a></li>
+                     <li><a href="#">Living</a></li>
+                     <li><a href="#">Keyring</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#">COLLECTION</a>
+                  <ul class="submenu">
+                     <li><a href="#">Character</a></li>
+                     <li><a href="#">Pattern</a></li>
+                     <li><a href="#">Collaboration</a></li>
+                     <li><a href="#">Limited Collaboration</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#">EVENT</a>
+                  <ul class="submenu">
+                     <li><a href="#">Promotion</a></li>
+                     <li><a href="#">Coupon</a></li>
+                     <li><a href="#">Membership</a></li>
+                     <li><a href="#">New Launch</a></li>
+                     <li><a href="#">Outlet</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="sub/about.html">ABOUT</a>
+                  <ul class="submenu">
+                     <li><a href="#">Brand Story</a></li>
+                     <li><a href="#">Philosophy</a></li>
+                     <li><a href="#">Character Story</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#">COMMUNITY</a>
+                  <ul class="submenu">
+                     <li><a href="#">Login</a></li>
+                     <li><a href="#">Orders</a></li>
+                     <li><a href="#">Wishlist</a></li>
+                     <li><a href="#">Recently Viewed</a></li>
+                     <li><a href="#">My Coupons</a></li>
+                     <li><a href="#">Mileage</a></li>
+                     <li><a href="#">Account Settings</a></li>
+                  </ul>
+               </li>
             </ul>
-        </nav>
+         </nav>
 
-        <div class="header_icon">
+
+         <div class="header_icon">
             <div class="h_icon">
-                <a href="#">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
+               <a href="#">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+               </a>
 
-                <a href="#">
-                    <i class="fa-regular fa-user"></i>
-                </a>
+               <a href="#">
+                  <i class="fa-solid fa-user"></i>
+               </a>
 
-                <a href="#">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                </a>
+               <a href="#">
+                  <i class="fa-solid fa-bag-shopping"></i>
+               </a>
 
-                <a href="#">
-                    <i class="fa-solid fa-bars"></i>
-                </a>
+               <a href="#">
+                  <i class="fa-solid fa-bars"></i>
+               </a>
             </div>
-        </div>
-    </header>
-    <!-- //header -->
+         </div>
+      </div>
+
+   </header>
+   <!-- //header -->
+
+    <!--modile menu -->
+
+   <div class="mobile_menu"></div>
+   <div class="mobile_menu_wrap">
+      <div class="mobile_menu_top">
+         <a href="#" class="mobile_login"><i class="fa-regular fa-user"></i> Login / Join</a>
+         <button type="button" class="btn_close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="mobile_search">
+         <i class="fa-solid fa-magnifying-glass" style="color: #0040C1;"></i>
+         <input type="text" placeholder="검색어를 입력하세요">
+      </div>
+
+      <ul class="mobile_nav">
+         <li>
+            <a href="#">SHOP <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="mobile_submenu">
+               <li><a href="#">NEW</a></li>
+               <li><a href="#">BEST</a></li>
+               <li><a href="#">Phone Case</a></li>
+               <li><a href="#">Earbuds Case</a></li>
+               <li><a href="#">Smart Tok</a></li>
+               <li><a href="#">Tablet & Laptop</a></li>
+               <li><a href="#">Bag & Pouch</a></li>
+               <li><a href="#">Digital</a></li>
+               <li><a href="#">Stationery</a></li>
+               <li><a href="#">Living</a></li>
+               <li><a href="#">Keyring</a></li>
+            </ul>
+         </li>
+         <li>
+            <a href="#">COLLECTION <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="mobile_submenu">
+               <li><a href="#">Character</a></li>
+               <li><a href="#">Pattern</a></li>
+               <li><a href="#">Collaboration</a></li>
+               <li><a href="#">Limited Collaboration</a></li>
+            </ul>
+         </li>
+         <li>
+            <a href="#">EVENT <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="mobile_submenu">
+               <li><a href="#">Promotion</a></li>
+               <li><a href="#">Coupon</a></li>
+               <li><a href="#">Membership</a></li>
+               <li><a href="#">New Launch</a></li>
+               <li><a href="#">Outlet</a></li>
+            </ul>
+         </li>
+         <li>
+            <a href="#">ABOUT <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="mobile_submenu">
+               <li><a href="#">Brand Story</a></li>
+               <li><a href="#">Philosophy</a></li>
+               <li><a href="#">Character Story</a></li>
+            </ul>
+         </li>
+         <li>
+            <a href="#">COMMUNITY <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="mobile_submenu">
+               <li><a href="#">Login</a></li>
+               <li><a href="#">Orders</a></li>
+               <li><a href="#">Wishlist</a></li>
+               <li><a href="#">Recently Viewed</a></li>
+               <li><a href="#">My Coupons</a></li>
+               <li><a href="#">Mileage</a></li>
+               <li><a href="#">Account Settings</a></li>
+            </ul>
+         </li>
+      </ul>
+   </div>
+
+   <!--//modile menu -->
 
     <!-- main -->
     <main class="shop_main">
@@ -64,8 +193,10 @@
         <!-- top promo banner -->
         <div class="promo_banner">
             <div class="promo_i">
+                <div class="textbox">
                 <span class="badge">HOT</span>
                 <p>7월 한정 <strong>여름 파우치 컬렉션</strong> 최대 38% 할인</p>
+                </div>
                 <button type="button" class="close_btn" aria-label="닫기">
                     <i class="fa-solid fa-xmark"></i>
                 </button>

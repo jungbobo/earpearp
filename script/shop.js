@@ -1,6 +1,5 @@
 $(function(){
 
-    // GNB 메인 메뉴 서브메뉴 슬라이드
   $('.menu > li').hover(
     function () {
       $(this).find('.submenu').stop().slideDown(200);
@@ -10,7 +9,6 @@ $(function(){
     }
   );
 
-  // 모바일 메뉴 열기
   $('.header_icon .fa-bars').parent('a').on('click', function (e) {
     e.preventDefault();
     $('.mobile_menu').fadeIn(200);
@@ -18,14 +16,12 @@ $(function(){
     $('body').css('overflow', 'hidden');
   });
 
-  // 모바일 메뉴 닫기
   $('.btn_close, .mobile_menu').on('click', function () {
     $('.mobile_menu').fadeOut(200);
     $('.mobile_menu_wrap').removeClass('active');
     $('body').css('overflow', '');
   });
 
-  // 모바일 아코디언 서브메뉴
   $('.mobile_nav > li > a').on('click', function (e) {
     var $submenu = $(this).next('.mobile_submenu');
 
@@ -40,6 +36,40 @@ $(function(){
     }
   });
 
+  $('.category_list li a').on('click', function (e) {
+    e.preventDefault();
+    $('.category_list li').removeClass('active');
+    $(this).parent('li').addClass('active');
+  });
 
-///////////////////    
-})
+  $('.sort_btn').on('click', function (e) {
+    if (window.matchMedia('(max-width: 500px)').matches) {
+      e.stopPropagation();
+      $('.sort_dropdown').toggleClass('active');
+      $('.sort_options').stop().slideToggle(200);
+    }
+  });
+
+  $('.sort_options li button').on('click', function () {
+    var selectedText = $(this).text();
+    $('.sort_btn span').text(selectedText);
+
+    $('.sort_options li').removeClass('active');
+    $(this).parent('li').addClass('active');
+
+    if (window.matchMedia('(max-width: 500px)').matches) {
+      $('.sort_dropdown').removeClass('active');
+      $('.sort_options').slideUp(200);
+    }
+  });
+
+  $(document).on('click', function (e) {
+    if (window.matchMedia('(max-width: 500px)').matches && !$(e.target).closest('.sort_dropdown').length) {
+      $('.sort_dropdown').removeClass('active');
+      $('.sort_options').slideUp(200);
+    }
+  });
+
+
+///////////////////////////////////////////////////  
+});

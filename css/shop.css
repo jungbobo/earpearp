@@ -314,6 +314,7 @@ header .header_i nav .menu .submenu li a:hover {
     font-size: clamp(12px, 1.2vw, 14px);
     color: #333;
 }
+
 .promo_i .textbox{
     display: flex;
 }
@@ -371,27 +372,46 @@ header .header_i nav .menu .submenu li a:hover {
     position: relative;
     font-size: clamp(13px, 1.1vw, 15px);
     color: #666;
-    padding-bottom: 4px;
+    padding-bottom: 6px;
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: color 0.2s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .category_list li a::before {
     content: "•";
     color: #888;
     font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.category_list li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0040c1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
 }
 
 .category_list li.active a {
     color: #0040c1;
-    font-family: "Pretendard_b";
-    border-bottom: 2px solid #0040c1;
+    font-family: "Pretendard_m";
+    text-shadow: 0.2px 0 0 #0040c1, -0.2px 0 0 #0040c1;
 }
 
 .category_list li.active a::before {
     color: #0040c1;
+}
+
+.category_list li.active a::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .shop_header {
@@ -418,12 +438,21 @@ header .header_i nav .menu .submenu li a:hover {
     color: #888;
 }
 
-.sort_list {
-    display: flex;
-    gap: clamp(6px, 1vw, 10px);
+.sort_dropdown {
+    position: relative;
 }
 
-.sort_list button {
+.sort_options {
+    display: flex;
+    gap: clamp(6px, 1vw, 10px);
+    position: static;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    background: transparent;
+}
+
+.sort_options li button {
     padding: clamp(6px, 0.8vw, 8px) clamp(12px, 1.5vw, 20px);
     border-radius: 30px;
     border: 1px solid #e2e2e2;
@@ -432,13 +461,21 @@ header .header_i nav .menu .submenu li a:hover {
     font-size: clamp(12px, 1vw, 14px);
     font-family: "Pretendard_m";
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.25s ease-in-out;
 }
 
-.sort_list li.active button {
+.sort_options li.active button {
     background-color: #0040c1;
     color: #ffffff;
     border-color: #0040c1;
+}
+
+.sort_options li button:hover {
+    background-color: #f5f5f5;
+}
+
+.sort_btn {
+    display: none;
 }
 
 .product_grid {
@@ -649,6 +686,16 @@ footer {
         gap: 16px;
     }
 
+    .sort_dropdown {
+        width: 100%;
+    }
+
+    .sort_options {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
     footer {
         padding: 60px 0;
     }
@@ -662,6 +709,143 @@ footer {
 @media screen and (max-width: 500px) {
     header {
         height: 60px;
+    }
+
+    .shop_container {
+        padding: 20px 8px 80px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .shop_header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sort_dropdown {
+        display: block !important;
+        width: auto;
+        position: relative;
+    }
+
+    .sort_btn {
+        display: inline-flex !important;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        border-radius: 30px;
+        border: 1px solid #e2e2e2;
+        background-color: #fff;
+        color: #333;
+        font-size: 12px;
+        font-family: "Pretendard_m";
+        cursor: pointer;
+    }
+
+    .sort_btn i {
+        font-size: 10px;
+        color: #666;
+        transition: transform 0.2s ease;
+    }
+
+    .sort_dropdown.active .sort_btn i {
+        transform: rotate(180deg);
+    }
+
+    .sort_options {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: calc(100% + 6px);
+        right: 0;
+        min-width: 110px;
+        background-color: #fff;
+        border: 1px solid #e2e2e2;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        z-index: 99;
+        overflow: hidden;
+        padding: 6px 0;
+        gap: 0;
+    }
+
+    .sort_options li {
+        width: 100%;
+    }
+
+    .sort_options li button {
+        width: 100%;
+        padding: 8px 14px;
+        text-align: left;
+        border: none;
+        border-radius: 0;
+        background: none;
+        color: #555;
+        font-size: 12px;
+        font-family: "Pretendard_r";
+    }
+
+    .sort_options li.active button,
+    .sort_options li button:hover {
+        background-color: #f5f5f5;
+        color: #0040c1;
+        border: none;
+        font-family: "Pretendard_sb";
+    }
+
+    .product_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 8px;
+        width: 100%;
+    }
+
+    .product_card {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .product_card .product_img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+
+    .product_card .product_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .product_card .product_name_row {
+        gap: 2px;
+        width: 100%;
+    }
+
+    .product_card .product_name {
+        font-size: 11px;
+        flex: 1;
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .product_card .product_price {
+        font-size: 11px;
+        margin-top: 2px;
+    }
+
+    .product_card .product_icons {
+        gap: 2px;
+        flex-shrink: 0;
+    }
+
+    .product_card .product_icons button {
+        font-size: 11px;
+        padding: 0;
     }
 
     .footer_i .text_box h3 {

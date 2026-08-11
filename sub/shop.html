@@ -10,15 +10,15 @@
     <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
 
     <!-- js 및 라이브러리 연결(폰트어썸) -->
-     <script src="../jquery-4.0.0.min.js"></script>
-     <script src="../jquery-ui.min.js"></script>
+    <script src="../jquery-4.0.0.min.js"></script>
+    <script src="../jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/a01f79776e.js" crossorigin="anonymous"></script>
     <script src="../script/shop.js"></script>
 </head>
 
 <body>
 
-       <!-- header -->
+   <!-- header -->
    <header>
       <div class="header_i">
          <h1 class="logo">
@@ -112,8 +112,7 @@
    </header>
    <!-- //header -->
 
-    <!--modile menu -->
-
+   <!-- mobile menu -->
    <div class="mobile_menu"></div>
    <div class="mobile_menu_wrap">
       <div class="mobile_menu_top">
@@ -184,8 +183,7 @@
          </li>
       </ul>
    </div>
-
-   <!--//modile menu -->
+   <!-- //mobile menu -->
 
     <!-- main -->
     <main class="shop_main">
@@ -232,18 +230,23 @@
                     <span class="count">전체 330개</span>
                 </div>
 
-                <ul class="sort_list">
-                    <li class="active"><button type="button">최신순</button></li>
-                    <li><button type="button">인기순</button></li>
-                    <li><button type="button">낮은 가격순</button></li>
-                    <li><button type="button">높은 가격순</button></li>
-                </ul>
+                <!-- 드롭다운 정렬 영역 -->
+                <div class="sort_dropdown">
+                    <button type="button" class="sort_btn">
+                        <span>최신순</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <ul class="sort_options">
+                        <li class="active"><button type="button">최신순</button></li>
+                        <li><button type="button">인기순</button></li>
+                        <li><button type="button">낮은 가격순</button></li>
+                        <li><button type="button">높은 가격순</button></li>
+                    </ul>
+                </div>
             </div>
 
             <!-- product grid -->
             <div class="product_grid">
 
-                <!-- item 1 -->
                 <div class="product_card">
                     <a href="#" class="product_img">
                         <img src="../image/vintage_dot.png" alt="빈티지 도트 에폭시 범퍼 케이스">
@@ -260,7 +263,6 @@
                     </div>
                 </div>
 
-                <!-- item 2 -->
                 <div class="product_card">
                     <a href="#" class="product_img">
                         <img src="../image/Aurora_Case.png" alt="[갤럭시 S25 추가] ONLY 오로라">
@@ -277,7 +279,6 @@
                     </div>
                 </div>
 
-                <!-- item 3 -->
                 <div class="product_card">
                     <a href="#" class="product_img">
                         <img src="../image/Silver_case.jpg" alt="라이트 그레이 - SILVER(에폭시)">
@@ -294,7 +295,6 @@
                     </div>
                 </div>
 
-                <!-- item 4 -->
                 <div class="product_card">
                     <a href="#" class="product_img">
                         <img src="../image/MagSafe_Transparent.jpg" alt="맥세이프 호환 투명 카드 포켓 케이스">
@@ -311,7 +311,6 @@
                     </div>
                 </div>
 
-                <!-- item 5 -->
                 <div class="product_card">
                     <a href="#" class="product_img">
                         <img src="../image/dot_pop_bule.jpg" alt="[SET]도트 팝 블루 선풍기+에폭시 케이스">
@@ -328,7 +327,6 @@
                     </div>
                 </div>
 
-                <!-- item 6 -->
                 <div class="product_card">
                     <a href="#" class="product_img">
                         <img src="../image/dot_pop_red.jpg" alt="[SET]도트 팝 레드 선풍기+에폭시 케이스">
@@ -345,7 +343,6 @@
                     </div>
                 </div>
 
-                <!-- item 7 -->
                 <div class="product_card">
                     <a href="#" class="product_img">
                         <img src="../image/dot_pop_black.jpg" alt="[SET]도트 팝 블랙 선풍기+에폭시 케이스">
@@ -362,7 +359,6 @@
                     </div>
                 </div>
 
-                <!-- item 8 -->
                 <div class="product_card">
                     <a href="#" class="product_img">
                         <img src="../image/tomato_set.jpg" alt="토마토 SET(반투명 케이스 + 우산)">
@@ -379,7 +375,6 @@
                     </div>
                 </div>
 
-                <!-- item 9 -->
                 <div class="product_card">
                     <a href="#" class="product_img">
                         <img src="../image/Midnight_Dot.jpg" alt="미드나잇 도트 (에폭시)">
@@ -396,7 +391,6 @@
                     </div>
                 </div>
 
-                <!-- item 10 -->
                 <div class="product_card">
                     <a href="#" class="product_img">
                         <img src="../image/tomato_dot_case.jpg" alt="토마토 도트 - SILVER(에폭시)">
@@ -413,7 +407,6 @@
                     </div>
                 </div>
 
-                <!-- item 11 -->
                 <div class="product_card">
                     <a href="#" class="product_img">
                         <img src="../image/tomato_sprinkles.jpg" alt="토마토 스프링클 - SILVER(에폭시)">
@@ -430,7 +423,6 @@
                     </div>
                 </div>
 
-                <!-- item 12 -->
                 <div class="product_card">
                     <a href="#" class="product_img">
                         <img src="../image/tomato_Stripe.jpg" alt="토마토 스트라이프 - SILVER(에폭시)">
@@ -468,7 +460,6 @@
                 <img src="../image/f_logo.png" alt="f_logo">
             </div>
 
-            <!-- COMPANY -->
             <div class="text_box">
                 <h3>COMPANY</h3>
                 <ul class="company_info">
@@ -488,7 +479,6 @@
                 </ul>
             </div>
 
-            <!-- CUSTOMER CENTER -->
             <div class="text_box">
                 <h3>CUSTOMER CENTER</h3>
                 <ul class="customer_info">
@@ -508,7 +498,6 @@
                 </ul>
             </div>
 
-            <!-- ADDRESS -->
             <div class="text_box">
                 <h3>ADDRESS</h3>
                 <ul class="address_info">
@@ -520,7 +509,6 @@
                 </ul>
             </div>
 
-            <!-- CONTACT -->
             <div class="text_box">
                 <h3>CONTACT</h3>
                 <ul class="contact_info">
@@ -543,12 +531,6 @@
         </div>
     </footer>
     <!-- //footer -->
-
-</body>
-
-</html>
-
-
 
 </body>
 

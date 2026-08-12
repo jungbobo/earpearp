@@ -263,18 +263,34 @@ header .header_i nav .menu .submenu li a:hover {
    border-bottom: 1px solid #f0f0f0;
 }
 
-.mobile_nav > li > a {
+.mobile_nav > li {
    display: flex;
    align-items: center;
    justify-content: space-between;
+   flex-wrap: wrap;
+   border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile_nav > li > .menu_title {
+   flex: 1;
    padding: 16px 0;
    font-family: "Pretendard_b";
    font-size: 16px;
    color: #222;
 }
 
+.mobile_nav > li > .btn_toggle {
+   background: none;
+   border: none;
+   padding: 16px 10px;
+   cursor: pointer;
+   color: #222;
+   font-size: 14px;
+}
+
 .mobile_submenu {
    display: none;
+   width: 100%;
    background-color: #f9f9f9;
    border-radius: 8px;
    padding: 10px 16px;

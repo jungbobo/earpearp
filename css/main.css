@@ -256,21 +256,33 @@ header .header_i nav .menu .submenu li a:hover {
 }
 
 .mobile_nav > li {
-   border-bottom: 1px solid #f0f0f0;
-}
-
-.mobile_nav > li > a {
    display: flex;
    align-items: center;
    justify-content: space-between;
+   flex-wrap: wrap;
+   border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile_nav > li > .menu_title {
+   flex: 1;
    padding: 16px 0;
    font-family: "Pretendard_b";
    font-size: 16px;
    color: #222;
 }
 
+.mobile_nav > li > .btn_toggle {
+   background: none;
+   border: none;
+   padding: 16px 10px;
+   cursor: pointer;
+   color: #222;
+   font-size: 14px;
+}
+
 .mobile_submenu {
    display: none;
+   width: 100%;
    background-color: #f9f9f9;
    border-radius: 8px;
    padding: 10px 16px;
@@ -285,7 +297,7 @@ header .header_i nav .menu .submenu li a:hover {
    color: #666;
 }
 
-.mobile_submenu li a:hover{
+.mobile_submenu li a:hover {
    color: #0040C1;
 }
 
@@ -589,14 +601,12 @@ header .header_i nav .menu .submenu li a:hover {
    transition: transform 0.2s ease;
 }
 
-/* --- 하트 아이콘 활성화(위시리스트) CSS 추가 --- */
 .wish_btn i {
    font-weight: 400;
    color: #333;
    transition: color 0.2s ease, transform 0.2s ease;
 }
 
-/* 활성화 상태 (클릭 시) */
 .wish_btn.active i {
    font-weight: 900 !important;
    color: #333 !important;
@@ -939,7 +949,6 @@ footer {
    color: #bcbcbc;
 }
 
-/* 태블릿 구간 (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
    .hero {
       height: auto;
@@ -1104,7 +1113,6 @@ footer {
    }
 }
 
-/* 모바일 구간 (max-width: 500px) */
 @media screen and (max-width: 500px) {
 
    header {

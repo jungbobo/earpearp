@@ -44,7 +44,7 @@
 }
 
 * {
-   font-family: "Pretendard_m", sans-serif;
+   font-family: "Pretendard_m";
    padding: 0;
    margin: 0;
    box-sizing: border-box;
@@ -85,14 +85,14 @@ header {
 
 header .header_i {
    position: relative;
-   width: 100%;
-   max-width: 1680px;
+   max-width: 100%;
    height: 100%;
    margin: auto;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   gap: 20px;
+   width: 100%;
+   gap: 100px;
 }
 
 header .header_i nav {
@@ -260,10 +260,6 @@ header .header_i nav .menu .submenu li a:hover {
 }
 
 .mobile_nav > li {
-   border-bottom: 1px solid #f0f0f0;
-}
-
-.mobile_nav > li {
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -354,11 +350,15 @@ main > h2 {
    margin-bottom: 24px;
 }
 
+.btn_en_accordion {
+    display: none;
+}    
+
 .brand_story .en {
    font-family: "Pretendard_r";
    font-size: 14px;
    line-height: 1.6;
-   color: var(--text-light-gray);
+   color: #666;
    margin-bottom: 60px;
 }
 
@@ -729,6 +729,35 @@ footer {
       display: inline-block;
    }
 
+   .btn_en_accordion {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: none;
+        border: none;
+        color: #0040C1;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        padding: 10px 0;
+        margin: 15px 0 10px 0;
+    }
+
+    .btn_en_accordion i {
+        transition: transform 0.3s ease;
+    }
+
+    .btn_en_accordion.active i {
+        transform: rotate(180deg);
+    }
+
+    .brand_story .en {
+        display: none;
+        word-break: keep-all;
+        line-height: 1.6;
+        padding-bottom: 15px;
+    }
+
    main .brand_story h3{
       font-size: 25px;
    }
@@ -787,6 +816,10 @@ footer {
 
 @media (max-width: 360px) {
    .character_list {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(1,1fr);
    }
+   .philosophy .philosophy_texrbox h3{
+      font-size: 25px;
+   }
+
 }

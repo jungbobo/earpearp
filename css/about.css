@@ -730,17 +730,18 @@ footer {
    }
 
    .btn_en_accordion {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        background: none;
-        border: none;
-        color: #0040C1;
-        font-weight: bold;
-        font-size: 15px;
-        cursor: pointer;
-        padding: 10px 0;
-        margin: 15px 0 10px 0;
+       display: flex;
+       align-items: center;
+       gap: 6px;
+       background: none;
+       border: none;
+       color: #0040c1;
+       font-family: "Pretendard_b";
+       font-size: 15px;
+       padding: 10px 0;
+       margin: 15px 0 10px 0;
+       text-align: left;
+       cursor: pointer;
     }
 
     .btn_en_accordion i {
@@ -754,8 +755,14 @@ footer {
     .brand_story .en {
         display: none;
         word-break: keep-all;
+        text-align: left;
         line-height: 1.6;
         padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+
+    .btn_en_accordion{
+      left: 0;
     }
 
    main .brand_story h3{

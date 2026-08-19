@@ -38,5 +38,11 @@ $(function(){
     }
   });
 
+  $('.btn_en_accordion').on('click', function(){
+    $(this).toggleClass('active');
+
+    $('.brand_story .en').slideToggle(300);
+  })
+
 ////////////////////////////    
 });

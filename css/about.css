@@ -355,6 +355,7 @@ main > h2 {
 }    
 
 .brand_story .en {
+   display: block;
    font-family: "Pretendard_r";
    font-size: 14px;
    line-height: 1.6;

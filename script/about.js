@@ -38,11 +38,19 @@ $(function(){
     }
   });
 
-  $('.btn_en_accordion').on('click', function(){
-    $(this).toggleClass('active');
+  $(document).ready(function() {
+    $('.btn_en_accordion').on('click', function() {
+        $(this).toggleClass('active');
+        $('.brand_story .en').slideToggle(300);
+    });
 
-    $('.brand_story .en').slideToggle(300);
-  })
+    $(window).on('resize', function() {
+        if ($(window).width() > 550) {
+            $('.brand_story .en').removeAttr('style');
+            $('.btn_en_accordion').removeClass('active');
+        }
+    });
+});
 
 ////////////////////////////    
 });

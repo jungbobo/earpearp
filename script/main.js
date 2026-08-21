@@ -56,18 +56,22 @@ $(function () {
     if (!$section.length) return;
 
     return new Swiper(`${sectionSelector} .swiper`, {
-      slidesPerView: 1,
-      spaceBetween: 0,
+      slidesPerView: 3,
+      spaceBetween: 30,
       grabCursor: true,
 
       breakpoints: {
-        768: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 16
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        1024: {
           slidesPerView: 3,
           spaceBetween: 30
-        },
-        1200: {
-          slidesPerView: 4,
-          spaceBetween: 40
         }
       },
 

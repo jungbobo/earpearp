@@ -78,6 +78,9 @@ header {
    background-color: transparent;
    border-bottom: none;
 }
+header.active{
+   background-color: #fff;
+}
 
 header .header_i {
    position: relative;
@@ -493,7 +496,7 @@ header .header_i nav .menu .submenu li a:hover {
 .product_grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: clamp(24px, 3vw, 40px) clamp(16px, 2vw, 30px);
+    gap: clamp(24px, 3vw, 48px) clamp(16px, 2vw, 32px);
 }
 
 .product_card {

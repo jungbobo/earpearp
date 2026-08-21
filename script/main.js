@@ -16,6 +16,14 @@ $(function () {
     $('body').css('overflow', 'hidden');
   });
 
+  $(window).on('scroll', function () {
+    if ($(this).scrollTop() > 50) {
+      $('header').addClass('active');
+    } else {
+      $('header').removeClass('active');
+    }
+  });
+
   $('.btn_close, .mobile_menu').on('click', function () {
     $('.mobile_menu').fadeOut(200);
     $('.mobile_menu_wrap').removeClass('active');

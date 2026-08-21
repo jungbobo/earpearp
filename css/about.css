@@ -83,6 +83,10 @@ header {
    border-bottom: none;
 }
 
+header.active{
+   background-color: #fff;
+}
+
 header .header_i {
    position: relative;
    max-width: 100%;
@@ -324,7 +328,6 @@ main > h2 {
    width: 100%;
    padding: 120px 0 140px;
    text-align: center;
-   background-color: #F6F7F9;
 }
 
 .brand_story_i {
@@ -431,7 +434,6 @@ main > h2 {
    width: 100%;
    padding: 120px 0 140px;
    text-align: center;
-   background-color: #F6F7F9;
 }
 
 .character_i {

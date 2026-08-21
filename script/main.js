@@ -46,53 +46,44 @@ $(function () {
     }
   });
 
+  $('.wish_btn').on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+  });
+
   function initProductSlider(sectionSelector) {
     const $section = $(sectionSelector);
-    const $list = $section.find('.product_list');
-    const $cards = $section.find('.product_card');
-    const $prevBtn = $section.find('.prev_btn');
-    const $nextBtn = $section.find('.next_btn');
+    if (!$section.length) return;
 
-    if (!$cards.length) return;
+    return new Swiper(`${sectionSelector} .swiper`, {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      grabCursor: true,
 
-    const cardWidth = $cards.outerWidth();
-    const gap = 40;
-    const moveDistance = cardWidth + gap;
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 40
+        }
+      },
 
-    let currentIndex = 0;
-    const visibleCards = 3;
-    const maxIndex = $cards.length - visibleCards;
+      navigation: {
+        nextEl: `${sectionSelector} .next_btn`,
+        prevEl: `${sectionSelector} .prev_btn`,
+      },
 
-    function updateButtons() {
-      $prevBtn.prop('disabled', currentIndex <= 0);
-      $nextBtn.prop('disabled', currentIndex >= maxIndex);
-    }
-
-    $nextBtn.on('click', function () {
-      if (currentIndex < maxIndex) {
-        currentIndex++;
-        $list.stop().animate({
-          marginLeft: -moveDistance * currentIndex + 'px'
-        }, 400);
-        updateButtons();
-      }
+      pagination: {
+        el: `${sectionSelector} .swiper-pagination`,
+        clickable: true,
+      },
     });
-
-    $prevBtn.on('click', function () {
-      if (currentIndex > 0) {
-        currentIndex--;
-        $list.stop().animate({
-          marginLeft: -moveDistance * currentIndex + 'px'
-        }, 400);
-        updateButtons();
-      }
-    });
-
-    updateButtons();
   }
 
   initProductSlider('.new');
   initProductSlider('.best');
 
-///////////////////////////////////  
 });

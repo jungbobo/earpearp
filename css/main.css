@@ -78,7 +78,8 @@ header {
    background-color: transparent;
    border-bottom: none;
 }
-header.active{
+
+header.active {
    background-color: #fff;
 }
 
@@ -446,8 +447,8 @@ header .header_i nav .menu .submenu li a:hover {
    background-color: #0040c1;
 }
 
-.new .new_i .slide_btn button:disabled,
-.best .best_i .slide_btn button:disabled {
+.new .new_i .slide_btn button.swiper-button-disabled,
+.best .best_i .slide_btn button.swiper-button-disabled {
    color: #c7c7c7;
    border-color: #e5e5e5;
    background-color: #fff;
@@ -490,32 +491,23 @@ header .header_i nav .menu .submenu li a:hover {
    justify-content: center;
 }
 
-.new .new_i .product_slider,
-.best .best_i .product_slider {
+.new .new_i .swiper,
+.best .best_i .swiper {
    width: 100%;
    overflow: hidden;
 }
 
-.new .new_i .product_list,
-.best .best_i .product_list {
-   display: flex;
-   align-items: flex-start;
-   gap: 40px;
-   position: relative;
-   will-change: margin-left;
-}
-
 .new .new_i .product_card,
 .best .best_i .product_card {
-   width: 336px;
-   height: 483px;
+   width: 100%;
+   height: auto;
 }
 
 .new .new_i .product_img,
 .best .best_i .product_img {
    display: block;
-   width: 336px;
-   height: 405px;
+   width: 100%;
+   aspect-ratio: 1 / 1.2;
    overflow: hidden;
 }
 
@@ -621,8 +613,29 @@ header .header_i nav .menu .submenu li a:hover {
    color: #0040c1;
 }
 
-.indicator_dots {
-   display: none;
+.swiper-pagination {
+   position: relative !important;
+   bottom: 0 !important;
+   margin-top: 20px;
+   display: none; /* 기본 숨김 */
+   justify-content: center;
+   align-items: center;
+   gap: 6px;
+}
+
+.swiper-pagination-bullet {
+   width: 8px;
+   height: 8px;
+   border-radius: 4px;
+   background-color: #cccccc !important;
+   opacity: 1 !important;
+   margin: 0 !important;
+   transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+   width: 24px;
+   background-color: #0040c1 !important;
 }
 
 .collabo .collabo_i {
@@ -1174,11 +1187,11 @@ footer {
       width: fit-content;
    }
 
-   .new{
+   .new {
       margin: 50px 0;
    }
 
-   .best{
+   .best {
       margin-bottom: 30px;
    }
 
@@ -1233,28 +1246,6 @@ footer {
       display: none;
    }
 
-   .new .new_i .product_slider,
-   .best .best_i .product_slider {
-      width: 100%;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-   }
-
-   .new .new_i .product_slider::-webkit-scrollbar,
-   .best .best_i .product_slider::-webkit-scrollbar {
-      display: none;
-   }
-
-   .new .new_i .product_list,
-   .best .best_i .product_list {
-      display: flex;
-      flex-direction: row;
-      gap: 0;
-      width: 100%;
-      position: relative;
-   }
-
    .new .new_i .product_card,
    .best .best_i .product_card {
       width: 100% !important;
@@ -1262,14 +1253,13 @@ footer {
       flex-shrink: 0;
       height: auto !important;
       padding-right: 0;
-      scroll-snap-align: start;
    }
 
    .new .new_i .product_img,
    .best .best_i .product_img {
       width: 100% !important;
       height: auto !important;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 1 / 1.2;
    }
 
    .new .new_i .product_name_row,
@@ -1292,30 +1282,6 @@ footer {
       display: flex;
       align-items: center;
       gap: 6px;
-   }
-
-   .indicator_dots {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 6px;
-      margin-top: 20px;
-   }
-
-   .indicator_dots button {
-      width: 8px;
-      height: 8px;
-      border-radius: 4px;
-      border: none;
-      background-color: #cccccc;
-      cursor: pointer;
-      padding: 0;
-      transition: all 0.3s ease;
-   }
-
-   .indicator_dots button.active {
-      width: 24px;
-      background-color: #0040c1;
    }
 
    .collabo .collabo_i .text_i .text_l h2 {
@@ -1419,6 +1385,11 @@ footer {
 }
 
 @media screen and (max-width: 390px) {
+
+   /* 모바일 화면(390px 이하)에서만 페이지네이션 노출 */
+   .swiper-pagination {
+      display: flex;
+   }
 
    .hero .hero_i {
       padding-top: 10px;

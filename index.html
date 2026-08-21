@@ -5,6 +5,10 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>earpearp</title>
+
+   <!-- Swiper CSS 연결 -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+
    <!-- css 및 favicon 연결 -->
    <link rel="stylesheet" href="./css/main.css">
    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
@@ -13,6 +17,9 @@
    <script src="./jquery-4.0.0.min.js"></script>
    <script src="../jquery-ui.min.js"></script>
    <script src="https://kit.fontawesome.com/a01f79776e.js" crossorigin="anonymous"></script>
+
+   <!-- Swiper JS 연결 -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
    <script src="./script/main.js"></script>
 </head>
 
@@ -113,7 +120,7 @@
    <!-- //header -->
 
 
-  <!--modile menu -->
+  <!--mobile menu -->
 
    <div class="mobile_menu"></div>
    <div class="mobile_menu_wrap">
@@ -201,7 +208,7 @@
       </ul>
    </div>
 
-   <!--//modile menu -->
+   <!--//mobile menu -->
 
    <!-- main -->
    <main>
@@ -233,7 +240,7 @@
       </section>
       <!-- //hero banner -->
 
-      <!-- new arriwals -->
+      <!-- new arrivals -->
       <section class="new">
          <div class="new_i">
 
@@ -262,12 +269,12 @@
                   VIEW ALL <span><i class="fa-solid fa-plus"></i></span>
                </a>
 
-
-               <div class="product_slider">
-                  <ul class="product_list">
+               <!-- Swiper 적용 영역 -->
+               <div class="swiper newSwiper">
+                  <div class="swiper-wrapper">
 
                      <!-- product 1 -->
-                     <li class="product_card">
+                     <div class="swiper-slide product_card">
                         <a href="#" class="product_img">
                            <img src="./image/pouch.jpg" alt="도트 스타 런치백">
                         </a>
@@ -291,10 +298,10 @@
 
                            <p class="product_price">19,800원</p>
                         </div>
-                     </li>
+                     </div>
 
                      <!-- product 2 -->
-                     <li class="product_card">
+                     <div class="swiper-slide product_card">
                         <a href="#" class="product_img">
                            <img src="./image/dot_tumbler.jpg" alt="도트 팝 텀블러">
                         </a>
@@ -318,10 +325,10 @@
 
                            <p class="product_price">26,900원</p>
                         </div>
-                     </li>
+                     </div>
 
                      <!-- product 3 -->
-                     <li class="product_card">
+                     <div class="swiper-slide product_card">
                         <a href="#" class="product_img">
                            <img src="./image/banana_rug.jpg" alt="미니스타 바나나">
                         </a>
@@ -345,10 +352,10 @@
 
                            <p class="product_price">22,900원</p>
                         </div>
-                     </li>
+                     </div>
 
                      <!-- product 4 -->
-                     <li class="product_card">
+                     <div class="swiper-slide product_card">
                         <a href="#" class="product_img">
                            <img src="./image/blue_dot_rug.jpg" alt="도트팝 블루 러그">
                         </a>
@@ -372,17 +379,17 @@
 
                            <p class="product_price">22,900원</p>
                         </div>
-                     </li>
+                     </div>
 
                      <!-- product 5 -->
-                     <li class="product_card">
+                     <div class="swiper-slide product_card">
                         <a href="#" class="product_img">
                            <img src="./image/myhome_rug.jpg" alt="마이홈 아이보리 러그">
                         </a>
 
                         <div class="product_info">
                            <div class="product_name_row">
-                              <a href="#" class="product-name">
+                              <a href="#" class="product_name">
                                  마이홈 아이보리(터프팅 러그)
                               </a>
 
@@ -399,10 +406,10 @@
 
                            <p class="product_price">22,900원</p>
                         </div>
-                     </li>
+                     </div>
 
                      <!-- product 6 -->
-                     <li class="product_card">
+                     <div class="swiper-slide product_card">
                         <a href="#" class="product_img">
                            <img src="./image/dot_pop_bule.jpg" alt="도트팝 블루 선풍기">
                         </a>
@@ -426,9 +433,10 @@
 
                            <p class="product_price">22,900원</p>
                         </div>
-                     </li>
-                  </ul>
-                  <div class="indicator_dots"></div>
+                     </div>
+                  </div>
+                  <!-- Swiper 페이징 인디케이터 -->
+                  <div class="swiper-pagination"></div>
                </div>
             </div>
             <!-- //right -->
@@ -436,7 +444,7 @@
 
          </div>
       </section>
-      <!-- //new arriwals -->
+      <!-- //new arrivals -->
 
       <!-- best seller -->
       <section class="best">
@@ -467,11 +475,12 @@
                   VIEW ALL <span><i class="fa-solid fa-plus"></i></span>
                </a>
 
-               <div class="product_slider">
-                  <ul class="product_list">
+               <!-- Swiper 적용 영역 -->
+               <div class="swiper bestSwiper">
+                  <div class="swiper-wrapper">
 
                      <!-- product 1 -->
-                     <li class="product_card">
+                     <div class="swiper-slide product_card">
                         <a href="#" class="product_img">
                            <img src="./image/tomato_um.png" alt="토마토우산">
                         </a>
@@ -495,10 +504,10 @@
 
                            <p class="product_price">29,800원</p>
                         </div>
-                     </li>
+                     </div>
 
                      <!-- product 2 -->
-                     <li class="product_card">
+                     <div class="swiper-slide product_card">
                         <a href="#" class="product_img">
                            <img src="./image/vintage_dot.png" alt="빈티지도트 케이스">
                         </a>
@@ -522,10 +531,10 @@
 
                            <p class="product_price">14,900원</p>
                         </div>
-                     </li>
+                     </div>
 
                      <!-- product 3 -->
-                     <li class="product_card">
+                     <div class="swiper-slide product_card">
                         <a href="#" class="product_img">
                            <img src="./image/magsafe_hard.jpg" alt="맥세이프 반투명 하드 케이스">
                         </a>
@@ -549,10 +558,10 @@
 
                            <p class="product_price">11,900원</p>
                         </div>
-                     </li>
+                     </div>
 
                      <!-- product 4 -->
-                     <li class="product_card">
+                     <div class="swiper-slide product_card">
                         <a href="#" class="product_img">
                            <img src="./image/tutti_cutie.jpg" alt="투티 큐트 도트 케이스">
                         </a>
@@ -576,17 +585,17 @@
 
                            <p class="product_price">14,900원</p>
                         </div>
-                     </li>
+                     </div>
 
                      <!-- product 5 -->
-                     <li class="product_card">
+                     <div class="swiper-slide product_card">
                         <a href="#" class="product_img">
                            <img src="./image/calmdownman.png" alt="덩실덩실 3인조 에어팟 케이스">
                         </a>
 
                         <div class="product_info">
                            <div class="product_name_row">
-                              <a href="#" class="product-name">
+                              <a href="#" class="product_name">
                                  [어프어프X침착맨]덩실덩실 3인조(에어팟-하드)
                               </a>
 
@@ -603,10 +612,10 @@
 
                            <p class="product_price">18,000원</p>
                         </div>
-                     </li>
+                     </div>
 
                      <!-- product 6 -->
-                     <li class="product_card">
+                     <div class="swiper-slide product_card">
                         <a href="#" class="product_img">
                            <img src="./image/mixmumu.jpg" alt="믹스 무무 키링">
                         </a>
@@ -630,9 +639,10 @@
 
                            <p class="product_price">4,000원</p>
                         </div>
-                     </li>
-                  </ul>
-                  <div class="indicator_dots"></div>
+                     </div>
+                  </div>
+                  <!-- Swiper 페이징 인디케이터 -->
+                  <div class="swiper-pagination"></div>
                </div>
             </div>
             <!-- //right -->
@@ -864,7 +874,6 @@
       </div>
    </footer>
    <!-- //footer -->
-
 
 </body>
 

@@ -802,6 +802,30 @@ header .header_i nav .menu .submenu li a:hover {
    gap: 34px;
 }
 
+.collection .collection_b .collection_text{
+   position: absolute;
+   left: 35px;
+   top: 45px;
+   z-index: 2;
+}
+
+.collection .collection_b .collection_text h3{
+   font-size: 38px;
+   font-family: "Pretendard_eb";
+   color: #0040c1;
+   line-height: 120%;
+   margin-bottom: 9px;
+   letter-spacing: -0.5px;
+}
+
+.collection .collection_b .collection_text p{
+   font-size: 18px;
+   font-family: "Pretendard_sb";
+   color: #0040c1;
+   line-height: 140%;
+}
+
+
 .collection .l_collection,
 .collection .r_collection {
    position: relative;
@@ -810,7 +834,7 @@ header .header_i nav .menu .submenu li a:hover {
    overflow: hidden;
    border-radius: 20px;
    background-repeat: no-repeat;
-   background-position: left;
+   background-position: center;
    background-size: cover;
 }
 
@@ -828,12 +852,12 @@ header .header_i nav .menu .submenu li a:hover {
    bottom: 40px;
    display: inline-flex;
    align-items: center;
-   padding: 16px 28px;
+   padding: 20px 32px;
    border-radius: 50px;
    color: #fff;
    background-color: #0040c1;
    font-family: "Pretendard_b";
-   font-size: 15px;
+   font-size: 20px;
    gap: 10px;
 }
 
@@ -867,7 +891,7 @@ header .header_i nav .menu .submenu li a:hover {
    background-position: center;
    background-size: cover;
    background-image: url(../image/brand_story.png);
-   border-radius: 15px;
+   border-radius: 20px;
 }
 
 .brand_story .brand_story_i .brand_img .plus_btn {
@@ -1063,6 +1087,19 @@ footer {
       flex-direction: column;
       height: auto;
       gap: 20px;
+   }
+
+   .collection .collection_b .collection_text{
+      left: 30px;
+      top: 30px;
+   }
+
+   .collection .collection_b .collection_text h3{
+      font-size: 26px;
+   }
+
+   .collection .collection_b .collection_text p{
+      font-size: 16px;
    }
 
    .collection .l_collection,
@@ -1328,6 +1365,20 @@ footer {
 
    .collection .collection_b {
       gap: 16px;
+   }
+
+   .collection .collection_b .collection_text{
+      left: 20px;
+      top: 20px;
+   }
+
+   .collection .collection_b .collection_text h3{
+      font-size: 22px;
+      margin-bottom: 6px;
+   }
+
+   .collection .collection_b .collection_text p{
+      font-size: 13px;
    }
 
    .collection .l_collection,

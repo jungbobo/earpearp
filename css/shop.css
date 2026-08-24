@@ -496,7 +496,7 @@ header .header_i nav .menu .submenu li a:hover {
 .product_grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: clamp(24px, 3vw, 48px) clamp(16px, 2vw, 32px);
+    gap: clamp(28px, 3vw, 52px) clamp(20px, 2vw, 36px);
 }
 
 .product_card {

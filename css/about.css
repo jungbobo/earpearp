@@ -327,7 +327,6 @@ main > h2 {
 .brand_story {
    width: 100%;
    padding: 120px 0 140px;
-   text-align: center;
 }
 
 .brand_story_i {
@@ -343,6 +342,7 @@ main > h2 {
    color: #0040c1;
    margin-bottom: 30px;
    line-height: 120%;
+   text-align: center;
 }
 
 .brand_story .ko {
@@ -351,6 +351,7 @@ main > h2 {
    line-height: 1.7;
    color: #222;
    margin-bottom: 24px;
+   text-align: center;
 }
 
 .btn_en_accordion {
@@ -364,6 +365,7 @@ main > h2 {
    line-height: 1.6;
    color: #666;
    margin-bottom: 60px;
+   text-align: center;
 }
 
 .brand_story .img {
@@ -753,6 +755,10 @@ footer {
 
     .btn_en_accordion.active i {
         transform: rotate(180deg);
+    }
+
+    .brand_story .ko{
+      text-align: left;
     }
 
     .brand_story .en {
